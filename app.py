@@ -241,7 +241,7 @@ def main():
                 comparison_df = pd.DataFrame(comparison_results)
                 st.dataframe(comparison_df, use_container_width=True, hide_index=True)
                 best_model = comparison_df.loc[comparison_df['RMSE'].idxmin()]
-                st.success(f"📊 **Model Terbaik**: Window Size {best_model['Window Size']} dengan nilai terkecil dari semua metrik")
+                st.success(f"📊 **Model Terbaik**: Window Size {best_model['Window Size']} dengan nilai terbaik dari semua metrik")
                 st.markdown("### Grafik Perbandingan Metrik")
                 metrics = ['RMSE', 'MSE', 'MAE', 'MAPE (%)', 'R² Score']
                 colors = ['#1E6B3A', '#8B0000', '#FFA500', '#FF6347', '#4682B4']
